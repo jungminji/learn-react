@@ -1,20 +1,19 @@
 /* eslint-disable */
 import React from 'react';
 import ReactDOM from 'react-dom';
-// Create a new component.
-// This component should produce some HTML
 
-// ES5
-// const App = function () {
-//   return <div>Learning React!</div>;
-// }
+import SearchBar from './components/search.bar';
+
+const API_KEY = 'AIzaSyB476XbcW_uPvgWpFA1ojvbs3j_o7JyXSo';
 
 // ES6
 const App = () => {
-  return <div>Learning React!</div>;
+  return (
+    <div>
+      <SearchBar />
+    </div>
+  );
 }
 
-// Take this component's generated HTML and put it on the page
-// (in the DOM)
 const container = document.querySelector('.container')
 ReactDOM.render(<App />, container);
