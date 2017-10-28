@@ -11,8 +11,26 @@ const SearchBarFn = () => {
 // Class component of React
 // class SearchBar extends React.Component {
 class SearchBar extends Component {
+  constructor (props) {
+    super(props);
+    // state is immutable so you have to use this.setState method
+    this.state = {
+      keyword: ''
+    };
+  }
   render () {
-    return <input onChange={event => console.log(event.target.value)} />;
+    return (
+      <div>
+        <input 
+          onChange = {
+            event => this.setState({
+              keyword: event.target.value
+            })
+          }
+        />
+        Keyword: { this.state.keyword }
+      </div>
+    );
   }
 }
 
