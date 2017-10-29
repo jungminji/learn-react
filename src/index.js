@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom';
 import YTSearch from 'youtube-api-search';
 
 import SearchBar from './components/search.bar';
+import VideoList from './components/video.list';
 
 const API_KEY = 'AIzaSyB476XbcW_uPvgWpFA1ojvbs3j_o7JyXSo';
 
@@ -17,6 +18,7 @@ const API_KEY = 'AIzaSyB476XbcW_uPvgWpFA1ojvbs3j_o7JyXSo';
 // }
 
 // Class component
+// props are accessible everywhere within class based component
 class App extends Component  {
   constructor (props) {
     super(props);
@@ -33,6 +35,7 @@ class App extends Component  {
     return (
       <div>
         <SearchBar />
+        <VideoList videos = {this.state.videos} />
       </div>
     );
   }
